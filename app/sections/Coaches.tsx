@@ -2,7 +2,7 @@ import { Section } from '@/components/Section';
 
 export const Coaches = () => {
   return (
-    <Section>
+    <Section id="coaches">
       <div></div>
     </Section>
   );

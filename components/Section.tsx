@@ -1,9 +1,13 @@
 export const Section = ({
   children,
+  id,
   ...props
-}: { children: React.ReactNode } & React.HTMLAttributes<HTMLDivElement>) => {
+}: {
+  children: React.ReactNode;
+  id: string;
+} & React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <section className="w-full p-5 h-[calc(100dvh-80px)]" {...props}>
+    <section id={id} className="w-full p-5 h-[calc(100dvh-80px)]" {...props}>
       {children}
     </section>
   );

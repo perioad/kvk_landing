@@ -1,27 +1,47 @@
 import { Section } from '@/components/Section';
+import { getImagePath } from '@/utils/get-image-path';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export const About = () => {
   return (
-    <Section>
-      <div className="w-full h-full overflow-hidden flex flex-col justify-around">
+    <Section id="about">
+      <div className="w-full h-full overflow-hidden flex flex-col justify-between">
+        <h1 className="text-center text-2xl font-bold text-secondary">
+          Коуч в кармане
+        </h1>
+
         <Image
-          src="/coaches.jpg"
+          src={getImagePath('coaches.jpg')}
           alt=""
           width={1280}
           height={853}
-          className="object-cover object-top w-full "
+          className="object-cover object-top w-full rounded-md"
         />
 
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos culpa et
-          ipsum! Perspiciatis maxime distinctio, voluptatibus culpa architecto
-          praesentium repellat illo aut pariatur adipisci quam, veniam aliquam
-          unde dignissimos autem.
-        </p>
+        <div className="flex flex-col">
+          <p>
+            Привет!{' '}
+            <span className="border-b border-secondary">Коуч в кармане</span> -
+            это команда виртуальных коучей, которые помогут тебе решить любые
+            проблемы. Каждый из них выслушает тебя и поможет:
+          </p>
+          <ul className="list-disc pl-5">
+            <li>найти ответ на личный вопрос любой сложности;</li>
+            <li>получить быструю консультацию в любой области;</li>
+            <li>
+              набросать несколько решений на выбор для любой из стоящих перед
+              тобой задач.
+            </li>
+          </ul>
 
-        <Link href="/" className="text-center bg-primary rounded-md p-3">
+          <p>
+            Хочешь лучше понять самого себя и то, как добиться задуманных
+            изменений? Стартуй, и всё получится ✨
+          </p>
+        </div>
+
+        <Link href="#coaches" className="text-center bg-primary rounded-md p-3">
           ↓ Познакомиться с коучами ↓
         </Link>
       </div>
