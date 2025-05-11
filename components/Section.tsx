@@ -12,7 +12,7 @@ export const Section = ({
   return (
     <section
       id={id}
-      className={cn('w-full p-5 h-[calc(100dvh-80px)]', className)}
+      className={cn('w-full p-5 h-[calc(100lvh-80px)]', className)}
       {...props}
     >
       {children}
