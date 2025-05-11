@@ -1,4 +1,5 @@
-import { About } from './sections/About';
+import { About } from '@/app/sections/About';
+import { Begin } from '@/app/sections/Begin';
 import { Coaches } from '@/app/sections/Coaches';
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <About />
       <Coaches />
+      <Begin />
     </>
   );
 }

@@ -21,9 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${mulish.variable} antialiased`}>
+      <body className={`${mulish.variable} antialiased `}>
         <Header />
-        <main className="w-full mt-[80px]">{children}</main>
+        <main className="w-full mt-[80px] max-w-screen-2xl mx-auto">
+          {children}
+        </main>
       </body>
     </html>
   );
