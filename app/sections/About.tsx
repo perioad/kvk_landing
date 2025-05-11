@@ -6,18 +6,21 @@ import Link from 'next/link';
 export const About = () => {
   return (
     <Section id="about">
-      <div className="w-full h-full overflow-hidden flex flex-col justify-between">
+      <div className="w-full h-full flex flex-col justify-between">
         <h1 className="text-center text-2xl font-bold text-secondary">
           Коуч в кармане
         </h1>
 
-        <Image
-          src={getImagePath('coaches.jpg')}
-          alt=""
-          width={1280}
-          height={853}
-          className="object-cover object-top w-full rounded-md"
-        />
+        <div className="relative">
+          <div className="absolute inset-0 -m-1 rounded-md bg-gradient-to-r from-purple-500 via-pink-500 via-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500 animate-rainbow-border"></div>
+          <Image
+            src={getImagePath('coaches.jpg')}
+            alt=""
+            width={1280}
+            height={853}
+            className="relative object-cover object-top w-full rounded-md"
+          />
+        </div>
 
         <div className="flex flex-col">
           <p>
